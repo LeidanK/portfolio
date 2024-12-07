@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulaire de Contact</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+</head>
+<body class="contact_background">
+<div class="border for_contact center-content">
+	<h1>Contactez-moi</h1>
+
+	<p><span style="color: red">* Champs obligatoires</span> </p>
+
+	<form id="formulaire" class="flex-column center-content">
+
+		<!--Nom et prénom-->
+		<div class="flex-row center-content">
+			<label for="name">Nom / Prénom :</label>
+			<input type="text" id="name" name="name">
+		</div>
+
+		<!--Numéro de téléphone-->
+		<div class="flex-row center-content">
+			<label for="tel">Téléphone :</label>
+			<input type="text" id="tel" name="tel">
+		</div>
+
+		<!--E-mail-->
+		<div class="flex-row center-content">
+			<label for="mail">E-mail <span style="color: red">*</span> :</label>
+			<input type="text" id="mail" name="mail"required>
+		</div>
+
+		<!--Message-->
+		<div class="flex-column">
+			<label for="message">Votre message <span style="color: red">*</span> :</label>
+			<input class="message_input" type="text" id="message" name="message" required>
+		</div>
+
+		<!--Bouton-->
+		<button class="button send on-hover" type="button" id="myb1" onclick="ValidForm()">Envoyer</button>
+	</form>
+</div>
+</body>
+</html>
