@@ -1,10 +1,3 @@
-function ValidForm() {
-    if (ValidForm() && ValidMail()) {
-        alert("Message envoyé !")
-    }
-    
-}
-
 function ValidTel() {
     let tel = document.getElementById('tel').value;
     const telRegex = /^(0|\+33|0033)[1-9][0-9]{8}$/;
@@ -24,5 +17,26 @@ function ValidMail() {
         return false;
     } else {
         return true;
+    }
+}
+
+function ValidMessage() {
+    let message = document.getElementById('message').value;
+    if (message.trim() === "") {
+        alert('Le message ne peut pas être vide.');
+        return false;
+    }
+    return true;
+}
+
+function ValidForm() {
+    let isTelValid = ValidTel();
+    let isMailValid = ValidMail();
+    let isMessageValid = ValidMessage();
+
+    if(isMailValid && isMailValid && isMessageValid) {
+        alert("Votre formulaire a été envoyé avec succès !")
+    } else {
+        alert("Veuillez corriger les informations saisies")
     }
 }
