@@ -34,7 +34,7 @@ function ValidForm() {
     let isMailValid = ValidMail();
     let isMessageValid = ValidMessage();
 
-    if(isMailValid && isMailValid && isMessageValid) {
+    if(isTelValid && isMailValid && isMessageValid) {
         alert("Votre formulaire a été envoyé avec succès !")
     } else {
         alert("Veuillez corriger les informations saisies")
